@@ -3,13 +3,13 @@ import styled from 'styled-components/native';
 import { FlatList, RefreshControl, TouchableOpacity } from 'react-native';
 import { Button, Icon } from 'react-native-elements';
 import { FontAwesome } from '@expo/vector-icons';
-import { HeaderContainer, HeaderTitle } from '../components/Header';
-import theme from '../styles/theme';
+import { HeaderContainer, HeaderTitle } from '../components/Header.tsx';
+import theme from '../styles/theme.ts';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Appointment } from '../types/appointments';
-import { Doctor } from '../types/doctors';
-import { RootStackParamList } from '../types/navigation';
+import { Appointment } from '../types/appointments.ts';
+import { Doctor } from '../types/doctors.ts';
+import { RootStackParamList } from '../types/navigation.ts';
 import { useFocusEffect } from '@react-navigation/native';
 
 type HomeScreenProps = {

@@ -1,6 +1,6 @@
 import { StatusBar } from 'react-native';
 import styled from 'styled-components/native';
-import theme from '../styles/theme';
+import theme from '../styles/theme.ts';
 
 export const HeaderContainer = styled.View`
   background-color: ${theme.colors.primary};
