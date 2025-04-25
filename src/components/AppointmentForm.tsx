@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import styled from 'styled-components/native';
+import { TouchableOpacity } from 'react-native';
 import { Button, Input, Text } from 'react-native-elements';
-import { Platform, View, TouchableOpacity } from 'react-native';
+import styled from 'styled-components/native';
 import theme from '../styles/theme.ts';
-import { Appointment } from '../types/appointments.ts';
 import { Doctor } from '../types/doctors.ts';
 
 const doctors: Doctor[] = [
@@ -202,7 +201,7 @@ const DoctorList = styled.ScrollView`
   margin-bottom: ${theme.spacing.large}px;
 `;
 
-const DoctorCard = styled(TouchableOpacity)<{ selected: boolean }>`
+const DoctorCard = styled(TouchableOpacity) <{ selected: boolean }>`
   flex-direction: row;
   align-items: center;
   padding: ${theme.spacing.medium}px;
@@ -255,33 +254,33 @@ const TimeSlotsGrid = styled.View`
   gap: ${theme.spacing.small}px;
 `;
 
-const TimeSlotButton = styled(TouchableOpacity)<{ selected: boolean; disabled: boolean }>`
+const TimeSlotButton = styled(TouchableOpacity) <{ selected: boolean; disabled: boolean }>`
   background-color: ${(props: { selected: boolean; disabled: boolean }) =>
-    props.disabled
-        ? theme.colors.background
-        : props.selected
-            ? theme.colors.primary
-            : theme.colors.white};
+        props.disabled
+            ? theme.colors.background
+            : props.selected
+                ? theme.colors.primary
+                : theme.colors.white};
   padding: ${theme.spacing.small}px ${theme.spacing.medium}px;
   border-radius: 8px;
   border-width: 1px;
   border-color: ${(props: { selected: boolean; disabled: boolean }) =>
-    props.disabled
-        ? theme.colors.background
-        : props.selected
-            ? theme.colors.primary
-            : theme.colors.text};
+        props.disabled
+            ? theme.colors.background
+            : props.selected
+                ? theme.colors.primary
+                : theme.colors.text};
   opacity: ${(props: { disabled: boolean }) => props.disabled ? 0.5 : 1};
 `;
 
-const TimeSlotText = styled(Text)<{ selected: boolean; disabled: boolean }>`
+const TimeSlotText = styled(Text) <{ selected: boolean; disabled: boolean }>`
   font-size: ${theme.typography.body.fontSize}px;
   color: ${(props: { selected: boolean; disabled: boolean }) =>
-    props.disabled
-        ? theme.colors.text
-        : props.selected
-            ? theme.colors.white
-            : theme.colors.text};
+        props.disabled
+            ? theme.colors.text
+            : props.selected
+                ? theme.colors.white
+                : theme.colors.text};
 `;
 
 const InputContainer = {

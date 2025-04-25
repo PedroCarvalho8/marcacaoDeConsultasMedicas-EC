@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import CreateAppointmentScreen from '../screens/CreateAppointmentScreen.tsx';
-import HomeScreen from '../screens/HomeScreen.tsx';
-import ProfileScreen from '../screens/ProfileScreen.tsx';
+import CreateAppointmentScreen from '../screens/CreateAppointmentScreen';
+import HomeScreen from '../screens/HomeScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 
 const Stack = createNativeStackNavigator();
 
