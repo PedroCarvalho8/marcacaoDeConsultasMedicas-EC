@@ -35,6 +35,7 @@ const RegisterScreen: React.FC = () => {
         name,
         email,
         password,
+        userType, // NOVO - Envia tipo de usuário
       });
 
       // Após o registro bem-sucedido, navega para o login
@@ -49,6 +50,27 @@ const RegisterScreen: React.FC = () => {
   return (
     <Container>
       <Title>Cadastro de Paciente</Title>
+
+      <SectionTitle>Tipo de Usuário</SectionTitle>
+      <UserTypeContainer>
+        <UserTypeButton 
+          selected={userType === 'PACIENTE'}
+          onPress={() => setUserType('PACIENTE')}
+        >
+          <UserTypeText selected={userType === 'PACIENTE'}>
+            Paciente
+          </UserTypeText>
+        </UserTypeButton>
+        
+        <UserTypeButton 
+          selected={userType === 'ADMIN'}
+          onPress={() => setUserType('ADMIN')}
+        >
+          <UserTypeText selected={userType === 'ADMIN'}>
+            Administrador
+          </UserTypeText>
+        </UserTypeButton>
+      </UserTypeContainer>
       
       <Input
         placeholder="Nome completo"
